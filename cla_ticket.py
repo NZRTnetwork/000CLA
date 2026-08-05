@@ -30,12 +30,29 @@ XC_USER_ID = 2
 # Full tag set, verified against GET /categories?type=ticket (see CLAUDE.md).
 # Re-derive from the live DB when tags change; keep this in sync.
 SYSTEM_TAGS = {
-    "api": 51,  "dol": 52,  "ics": 53,  "ite": 54,  "ncl": 55,
-    "ncs": 56,  "wor": 57,  "cpl": 76,  "mai": 77,  "scr": 204,
-    "tog": 205, "obs": 281, "fla": 282, "git": 283, "llm": 333,
-    "agt": 334, "win": 335, "bnz": 360, "bun": 361, "pal": 362,
-    "ffm": 375, "goo": 379, "bch": 383, "cla": 384, "k8s": 385,
-    "pod": 394, "ytb": 395, "rpo": 396, "bus": 397, "app": 398,
+    "aba": 408, "adm": 409, "aga": 400, "agt": 334, "api": 51,
+    "app": 398, "aut": 401, "bch": 383, "bnz": 360, "bra": 410,
+    "bun": 361, "bup": 411, "bus": 397, "cal": 402, "cas": 412,
+    "cat": 413, "cfg": 414, "chr": 415, "cla": 384, "cod": 416,
+    "com": 417, "con": 418, "cpl": 76,  "dai": 419, "dan": 420,
+    "dem": 421, "doc": 422, "dol": 52,  "dve": 423, "ema": 424,
+    "ety": 425, "eve": 403, "ext": 426, "fai": 427, "ffm": 375,
+    "fil": 428, "fin": 429, "fla": 282, "flo": 430, "fox": 431,
+    "fra": 432, "git": 283, "goo": 379, "gov": 433, "han": 434,
+    "ics": 53,  "img": 435, "ins": 436, "int": 437, "ite": 54,
+    "itg": 438, "k8s": 385, "kbs": 439, "llm": 333, "mai": 77,
+    "med": 440, "mig": 441, "mnu": 442, "mp3": 443, "mp4": 444,
+    "mth": 445, "ncl": 55,  "ncs": 56,  "not": 446, "obs": 281,
+    "ops": 447, "orc": 404, "org": 448, "pal": 362, "pam": 449,
+    "pat": 450, "pdf": 451, "pgc": 452, "pgt": 453, "pjs": 399,
+    "pla": 454, "pln": 455, "pod": 394, "pol": 456, "por": 457,
+    "pre": 458, "pro": 459, "psc": 460, "pst": 461, "ref": 462,
+    "rev": 463, "rpo": 396, "rpt": 464, "sai": 465, "sch": 405,
+    "scr": 204, "sdr": 466, "seq": 406, "ses": 467, "sli": 468,
+    "str": 469, "sun": 470, "svc": 471, "sys": 472, "tag": 473,
+    "tic": 474, "tog": 205, "tol": 475, "tri": 407, "tsk": 476,
+    "typ": 477, "vlt": 478, "web": 479, "wik": 480, "win": 335,
+    "wor": 57,  "wps": 481, "x40": 482, "ytb": 395,
 }
 
 
