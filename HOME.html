@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>000CLA — Claude Repos</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --panel:#ffffff; --ink:#1b1f24; --muted:#5b6570;
+    --line:#e3e7ec; --accent:#2f6fed;
+    --intg-bg:#e7f0fe; --intg-ink:#22508f;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171b; --panel:#1c2127; --ink:#e7ebf0; --muted:#9aa4b0;
+      --line:#2a313a; --accent:#6ea0ff;
+      --intg-bg:#16294a; --intg-ink:#a9c6ff;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16.5px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .layout{display:flex;align-items:flex-start}
+  .side{position:sticky;top:0;flex:0 0 244px;width:244px;height:100vh;overflow-y:auto;
+    border-right:1px solid var(--line);background:var(--panel);padding:16px 12px}
+  .side-h{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--muted);padding:0 8px 10px}
+  .side-sub{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--muted);opacity:.75;padding:12px 8px 4px;margin-top:4px;border-top:1px solid var(--line)}
+  .side a{display:block;position:relative;padding:6px 34px 6px 10px;border-radius:8px;
+    text-decoration:none;color:var(--ink);margin-bottom:1px;border-left:3px solid transparent}
+  .side a:hover{background:rgba(125,125,125,.12)}
+  .side a.active{background:var(--intg-bg);border-left-color:var(--accent)}
+  .nref{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;
+    font-weight:700;font-size:13px;letter-spacing:.01em}
+  .nttl{display:block;color:var(--muted);font-size:12px;line-height:1.3}
+  .main{flex:1;min-width:0;padding:26px 24px 80px;max-width:1180px}
+  h1{font-size:27px;margin:0 0 4px}
+  .count{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+  .lead{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:800px}
+  .st{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap}
+  .st-intg{background:var(--intg-bg);color:var(--intg-ink)}
+  section{margin:20px 0;scroll-margin-top:14px}
+  section h2{font-size:18.5px;margin:0 0 8px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .gcode{display:inline-block;padding:3px 10px;border-radius:999px;font-size:13.5px;font-weight:700;
+    background:var(--intg-bg);color:var(--intg-ink);letter-spacing:.02em;
+    font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace}
+  .gn{color:var(--muted);font-weight:400;font-size:14px}
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+  th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+  tr:last-child td{border-bottom:none}
+  td:first-child{white-space:nowrap;min-width:220px}
+  code{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;font-size:13.5px}
+  .foot{color:var(--muted);font-size:13px;margin-top:26px}
+  @media (max-width:900px){
+    .layout{flex-direction:column}
+    .side{position:static;height:auto;max-height:38vh;width:100%;flex-basis:auto;
+      border-right:none;border-bottom:1px solid var(--line)}
+    .main{padding:20px 16px 60px}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="side-h">000CLA — Claude Repos</div>
+    <nav>
+      <div class="side-sub">Scripts</div>
+      <a href="#scripts" data-nav="scripts"><span class="nref">cla_ticket.py</span><span class="nttl">session-start CLA ticket</span></a>
+      <div class="side-sub">Directories</div>
+      <a href="#dirs" data-nav="dirs"><span class="nref">claude-code-multi-agent-setup\</span><span class="nttl">public pattern repo</span></a>
+      <div class="side-sub">Parent</div>
+      <a href="../HOME.html"><span class="nref">../ 000AGT</span><span class="nttl">Agent Universe</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <h1>000CLA — Claude Repos <span class="st st-intg" style="vertical-align:middle">RPO-cla</span></h1>
+    <p class="count">GitHub: NZRTnetwork/000CLA &middot; nested under 000AGT</p>
+    <p class="lead">Claude Code and AI agent setup for the <code>cla</code> role — the mandatory
+      session-start CLA traceability script, plus the public multi-agent Claude Code pattern repo.</p>
+
+<section id="scripts">
+  <h2><span class="gcode">Scripts</span></h2>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Item</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>cla_ticket.py</code></td><td>The mandatory session-start CLA traceability script — creates the per-session Dolibarr audit ticket (project PJ-LLM, task LLM-TSK-003). Holds the <code>SYSTEM_TAGS</code> shortcode → category map, regenerated from the live DB.</td></tr>
+    <tr><td><code>README.md</code></td><td>Repo readme.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="dirs">
+  <h2><span class="gcode">Directories</span></h2>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Folder</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>claude-code-multi-agent-setup\</code></td><td>Public multi-agent Claude Code pattern repo.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="foot">Last updated: 2026-08-18</p>
+</section>
+  </main>
+</div>
+<script>
+(function(){
+  var links={};
+  document.querySelectorAll('.side a[data-nav]').forEach(function(a){links[a.dataset.nav]=a;});
+  var current=null;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        if(current) current.classList.remove('active');
+        current=links[e.target.id];
+        if(current){current.classList.add('active');current.scrollIntoView({block:'nearest'});}
+      }
+    });
+  },{rootMargin:'0px 0px -70% 0px',threshold:0});
+  document.querySelectorAll('section[id]').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
