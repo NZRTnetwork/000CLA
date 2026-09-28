@@ -30,7 +30,7 @@ XC_USER_ID = 2
 # Full tag set, verified against GET /categories?type=ticket (see CLAUDE.md).
 # Re-derive from the live DB when tags change; keep this in sync.
 SYSTEM_TAGS = {
-    "aba": 408, "adm": 409, "aga": 400, "agt": 334, "api": 51,
+    "aba": 408, "aca": 515, "adm": 409, "aga": 400, "agt": 334, "api": 51,
     "app": 398, "aut": 401, "bch": 383, "bid": 501, "bkt": 502, "bnz": 360, "bra": 410,
     "bun": 361, "bup": 411, "bus": 397, "cal": 402, "cas": 412,
     "cat": 413, "cfg": 414, "chr": 415, "cla": 384, "cod": 416,
