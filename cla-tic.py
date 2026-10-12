@@ -1,9 +1,9 @@
 """
-create_cla_ticket.py — create a Claude session traceability ticket assigned to xc.
+cla-tic.py — create a Claude session traceability ticket assigned to xc.
 Hardcoded: type=000LLM, category=CLA, assign=xc (user_id=2).
 
 Usage:
-  python create_cla_ticket.py --subject "Session 06.06 — updated NCS SOP, ticket scripts" \\
+  python cla-tic.py --subject "Session 06.06 — updated NCS SOP, ticket scripts" \\
       [--message "..."] [--systems obs,agt,dol] [--project-id N] [--dry-run]
 
 --systems: comma-separated shortcodes for systems touched in session.
@@ -17,7 +17,7 @@ import json
 import urllib.request
 import urllib.error
 from dotenv import load_dotenv
-load_dotenv(dotenv_path=r"C:\RPO-SAI\SYS\PLA\WIN\FRA\FAI\ORG\RPO-NZT\OPS\RPO-agt\SET\create_agents\.env")
+load_dotenv(dotenv_path=r"C:\RPO-SAI\SYS\PLA\WIN\FRA\FAI\ORG\RPO-NZT\OPS\RPO-agt\SET\ENV\.env")
 
 DOL_HELPER_URL    = "https://nzrtnetwork.com/dol-sql-helper/"
 DOL_HELPER_SECRET = "nzrt_f7a2c849e3d561b0"
@@ -38,12 +38,12 @@ SYSTEM_TAGS = {
     "dan": 420, "dat": 503,
     "dem": 421, "doc": 422, "dol": 52, "dve": 423, "ema": 424,
     "env": 518, "ety": 425, "eve": 403, "ext": 426, "fai": 427, "ffm": 375,
-    "fil": 428, "fin": 429, "fla": 282, "flo": 430, "fol": 491,
+    "fil": 428, "fin": 429, "fla": 282, "flo": 430, "fma": 520, "fol": 491,
     "fox": 431,
     "fra": 432, "ga4": 484, "git": 283, "goo": 379, "gov": 433,
     "gsc": 485, "han": 434, "hwi": 516, "ics": 53, "img": 435, "ind": 488,
     "ins": 436, "int": 437, "ite": 54, "itg": 438, "k8s": 385,
-    "kbs": 439, "llm": 333, "mai": 77, "med": 440, "mig": 441,
+    "kbs": 439, "llm": 333, "lms": 519, "mai": 77, "med": 440, "mig": 441,
     "mnu": 442, "mp3": 443, "mp4": 444, "mth": 445, "mtm": 487,
     "ncl": 55, "ncs": 56, "not": 446, "nzt": 486, "obs": 281,
     "ops": 447, "orc": 404, "org": 448, "osi": 517, "pal": 362, "pam": 449,
@@ -54,8 +54,8 @@ SYSTEM_TAGS = {
     "scr": 204, "sdr": 466, "sec": 489, "sel": 506, "seq": 406, "ses": 467,
     "sli": 468, "str": 469, "sun": 470, "svc": 471, "sys": 472,
     "tag": 473, "tai": 492, "tdv": 499, "tic": 474, "tog": 205, "tol": 475, "tra": 507,
-    "tri": 407,
-    "tsk": 476, "typ": 477, "vlt": 478, "web": 479, "wik": 480,
+    "tri": 407, "txo": 526,
+    "tsk": 476, "typ": 477, "upd": 525, "vlt": 478, "web": 479, "wik": 480,
     "win": 335, "wor": 57, "wps": 481, "wsk": 493, "wts": 483, "x40": 482,
     "ytb": 395,
 }
@@ -95,7 +95,7 @@ def main():
     # its children with NZRT_AGENT_RUN; refuse outright rather than rely on the prompt.
     if os.environ.get("NZRT_AGENT_RUN"):
         sys.stderr.write(
-            "REFUSED: create_cla_ticket.py cannot be run from an agent run "
+            "REFUSED: cla-tic.py cannot be run from an agent run "
             f"(NZRT_AGENT_RUN={os.environ['NZRT_AGENT_RUN']}).\n"
             "CLA session tickets are xc's audit trail only. Agents consume tickets, "
             "they do not create them. Continue with your assigned tickets.\n")
