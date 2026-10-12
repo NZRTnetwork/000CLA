@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 load_dotenv(dotenv_path=r"C:\RPO-SAI\SYS\PLA\WIN\FRA\FAI\ORG\RPO-NZT\OPS\RPO-agt\SET\ENV\.env")
 
 DOL_HELPER_URL    = "https://nzrtnetwork.com/dol-sql-helper/"
-DOL_HELPER_SECRET = "nzrt_f7a2c849e3d561b0"
+DOL_HELPER_SECRET = (os.environ.get("DOL_HELPER_SECRET") or __import__("dotenv").dotenv_values(r"C:\RPO-SAI\SYS\PLA\WIN\FRA\FAI\ORG\RPO-NZT\OPS\RPO-agt\SET\ENV\.env").get("DOL_HELPER_SECRET", ""))
 DOL_BASE = "https://erp.nzrtnetwork.com/dolibarr/api/index.php"
 DOL_WEB  = "https://erp.nzrtnetwork.com/dolibarr"
 
@@ -30,6 +30,7 @@ XC_USER_ID = 2
 # Full tag set, verified against GET /categories?type=ticket (see CLAUDE.md).
 # Re-derive from the live DB when tags change; keep this in sync.
 SYSTEM_TAGS = {
+    "chk": 528, "crt": 527, "pub": 531, "run": 529, "syn": 530,
     "aba": 408, "aca": 515, "adm": 409, "aga": 400, "agt": 334, "api": 51,
     "app": 398, "aut": 401, "bch": 383, "bid": 501, "bkt": 502, "bnz": 360, "bra": 410,
     "bun": 361, "bup": 411, "bus": 397, "cal": 402, "cas": 412,
